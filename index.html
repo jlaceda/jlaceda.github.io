@@ -1,3 +1,18 @@
+<!--
+
+Hi! Thanks for checking out my page!
+
+Some notes about this page:
+	- this is one html file with no images for speed and portability
+	- no javascript for the same reason as above
+		(check out one of my projects for js examples)
+	- style: reset css at the top for maximum browser compatibility
+
+email me for any inquiries, professional or otherwise:
+
+john *dot* laceda _at_ gmail -dot- com
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,88 +69,107 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-	</style>
-	<style>
-		html, body {
-			height: 100%;
-			background: #2b2b2b;
-			font-family: monospace;
-		}
-		a {
-			color: #cc9393;
-		}
-		a:hover {
-			background-color: #ccc;
-		}
-		header {
-			color: #fdce93;
-			min-height: 100%;
-			height: 100%;
-		}
-		.main-header {
-			min-height: 80%;
-			height: 80%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
-		header p {
-			font-size: calc(20px + 1vw);
-		}
-		.social {
-			min-height: 20%;
-			height: 20%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		.social p {
-			font-size: calc(16px + 1vw);
-		}
-		.haikuTag {
-			color: #fdcd9320;
-		}
-		.projects-container {
-			display: flex;
-			flex-direction: column;
-			align-items: stretch;
-			justify-content: space-around;
-			color: #fdce93;
-			font-size: calc(10px + 1vw);
-			flex-wrap: wrap;
-			line-height: calc(16px + 1vw);
-		}
-		.projects-container h2 {
-			font-size: calc(20px + 1vw);
-			background: #222;
-		}
-		.projects-item {
-			border: #222;
-			margin-left: calc(5px + 1vw);
-			margin-right: calc(5px + 1vw);
-		}
-		h2 {
-			color: #fdce93;
-			font-size: calc(20px + 1vw);
-			background: #222;
-		}
-		#about p {
-			font-size: calc(10px + 1vw);
-			color: #7f9f7f;
-			margin-bottom: calc(8px + 1vw);
-			margin-left: calc(4px + 1vw);
-			margin-right: calc(4px + 1vw);
-		}
-		footer {
-			margin-top: 3rem;
-			background: #222;
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: space-around;
-			align-items: center;
-			height: 5vh;
-		}
+
+/* custom styles*/
+html, body {
+	height: 100%;
+	background: #2f2f2f;
+	font-family: monospace;
+}
+a {
+	color: #cc9393;
+}
+a:hover {
+	background-color: #ccc;
+}
+header {
+	color: #fdce93;
+	min-height: 100%;
+	height: 100%;
+}
+.main-header {
+	min-height: 80%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+header p {
+	font-size: calc(20px + 1vw);
+}
+.social {
+	min-height: 20%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.social p {
+	font-size: calc(16px + 1vw);
+}
+.haikuTag {
+	color: #fdcd9320;
+}
+.projects-container::before {
+	content: "[";
+}
+.projects-container::after {
+	content: "]";
+}
+.projects-container {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: space-around;
+	color: #fdce93;
+	font-size: calc(10px + 1vw);
+	flex-wrap: wrap;
+	line-height: calc(16px + 1vw);
+}
+.projects-container h2 {
+	font-size: calc(20px + 1vw);
+	background: #222;
+}
+.projects-item {
+	border: #222;
+	margin-left: calc(5px + 1vw);
+	margin-right: calc(5px + 1vw);
+}
+.projects-item::before {
+	content: "{";
+}
+.projects-item::after {
+	content: "},";
+}
+.comment::before {
+	content: "/*    ";
+}
+.comment::after {
+	content: "    */";
+}
+h2 {
+	color: #fdce93;
+	font-size: calc(20px + 1vw);
+	background: #222;
+}
+#about p {
+	font-size: calc(10px + 1vw);
+	color: #7f9f7f;
+	margin-bottom: calc(8px + 1vw);
+	margin-left: calc(4px + 1vw);
+	margin-right: calc(4px + 1vw);
+}
+footer {
+	color:#fdcd9320;
+	margin-top: 3rem;
+	background: #222;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	height: 5vh;
+}
 	</style>
 </head>
 <body>
@@ -160,56 +194,54 @@ table {
 	<div id="projects">
 		<h2 style="margin-bottom: 3rem; padding: 1rem;">Projects</h2>
 		<div class="projects-container">
-			<p>let frontend = [</p>
 			<div class="projects-item">
 				<p>
-					{<br />&nbsp;&nbsp;&nbsp;&nbsp; name: 'Let's Live Web App',
+					&nbsp;&nbsp;&nbsp;&nbsp; name: 'Let's Live Web App',
 					<br />&nbsp;&nbsp;&nbsp;&nbsp; link: '<a href="https://jlaceda.github.io/lets-live/" target="_blank">jlaceda.github.io/lets-live</a>',
 					<br />&nbsp;&nbsp;&nbsp;&nbsp; github: '<a href="https://github.com/jlaceda/lets-live" target="_blank">github.com/jlaceda/lets-live</a>'
-					<br />},
 				</p>
 			</div>
 			<div class="projects-item">
 				<p>
-					{<br />&nbsp;&nbsp;&nbsp;&nbsp; name: 'Speed Jeopardy!',
+					&nbsp;&nbsp;&nbsp;&nbsp; name: 'Task Master',
+					<br />&nbsp;&nbsp;&nbsp;&nbsp; link: '<a href="https://jml-taskmaster.herokuapp.com" target="_blank">jml-taskmaster.herokuapp.com</a>',
+					<br />&nbsp;&nbsp;&nbsp;&nbsp; github: '<a href="https://github.com/jlaceda/taskmaster" target="_blank">github.com/jlaceda/taskmaster</a>'
+				</p>
+			</div>
+			<div class="projects-item">
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp; name: 'Speed Jeopardy!',
 					<br />&nbsp;&nbsp;&nbsp;&nbsp; link: '<a href="https://jlaceda.github.io/trivia-game/" target="_blank">jlaceda.github.io/trivia-game</a>',
 					<br />&nbsp;&nbsp;&nbsp;&nbsp; github: '<a href="https://github.com/jlaceda/trivia-game" target="_blank">github.com/jlaceda/trivia-game</a>'
-					<br />},
 				</p>
 			</div>
 			<div class="projects-item">
 				<p>
-					{<br />&nbsp;&nbsp;&nbsp;&nbsp; name: 'Emo Bands Hangman',
+					&nbsp;&nbsp;&nbsp;&nbsp; name: 'Friend Finder',
+					<br />&nbsp;&nbsp;&nbsp;&nbsp; link: '<a href="https://jml-friend-finder.herokuapp.com/" target="_blank">jml-friend-finder.herokuapp.com</a>',
+					<br />&nbsp;&nbsp;&nbsp;&nbsp; github: '<a href="https://github.com/jlaceda/FriendFinder" target="_blank">github.com/jlaceda/FriendFinder</a>'
+				</p>
+			</div>
+			<div class="projects-item">
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp; name: 'Emo Bands Hangman',
 					<br />&nbsp;&nbsp;&nbsp;&nbsp; link: '<a href="https://jlaceda.github.io/word-guess-game/" target="_blank">jlaceda.github.io/word-guess-game</a>',
 					<br />&nbsp;&nbsp;&nbsp;&nbsp; github: '<a href="https://github.com/jlaceda/word-guess-game" target="_blank">github.com/jlaceda/word-guess-game</a>'
-					<br />},
 				</p>
 			</div>
 			<div class="projects-item">
 				<p>
-					{<br />&nbsp;&nbsp;&nbsp;&nbsp; name: 'Train Scheduler',
-					<br />&nbsp;&nbsp;&nbsp;&nbsp; link: '<a href="https://jlaceda.github.io/train-scheduler/" target="_blank">jlaceda.github.io/train-scheduler</a>',
-					<br />&nbsp;&nbsp;&nbsp;&nbsp; github: '<a href="https://github.com/jlaceda/train-scheduler" target="_blank">github.com/jlaceda/train-scheduler</a>'
-					<br />},
-				</p>
-			</div>
-			<div class="projects-item">
-				<p>
-					{<br />&nbsp;&nbsp;&nbsp;&nbsp; name: 'GifTastic Animals',
+					&nbsp;&nbsp;&nbsp;&nbsp; name: 'GifTastic Animals',
 					<br />&nbsp;&nbsp;&nbsp;&nbsp; link: '<a href="https://jlaceda.github.io/giftastic/" target="_blank">jlaceda.github.io/giftastic</a>',
 					<br />&nbsp;&nbsp;&nbsp;&nbsp; github: '<a href="https://github.com/jlaceda/giftastic" target="_blank">github.com/jlaceda/giftastic</a>'
-					<br />},
 				</p>
 			</div>
-			<p>];</p>
-			<p>let backend = []</p>
 		</div>
 	</div>
 
 	<div id="about">
 		<h2 style="margin-bottom: 3rem; padding: 1rem;">About Me</h2>
-		<p>/*</p>
-		<p>I'm John Michael Laceda. I'm an aspiring Full
+		<p class="comment">I'm John Michael Laceda. I'm an aspiring Full
 			Stack Developer with an extensive tech
 			background in supporting backend services. I
 			hail from a land across the Great Puget Sound in
@@ -218,38 +250,35 @@ table {
 			and I take care of a cute little Rat-Cha
 			(Chihuahua / Rat Terrier mix) named Bella and an
 			old spinster Tabby named Pudgy.</p>
-		<p>I grew up in the Philippines and survived a <a
-				target="blank"
+		<p class="comment">I grew up in the Philippines and survived a <a
 				href="https://en.wikipedia.org/wiki/Mount_Pinatubo#1991_eruption" target="_blank">volcano
 				eruption</a> before my family and I
 			emigrated to The United States of America.</p>
-		<p>In high school I took a Computer Aided Drafting
+		<p class="comment">In high school I took a Computer Aided Drafting
 			class as an elective. This set me on a course to
 			wanting to learn all about computers and started
 			breaking and fixing (if I was lucky!) our family
 			computer. I started to get into Linux and
 			eventually got a job supporting back end
 			services run on Linux servers.</p>
-		<p>My hobbies are fleeting obsessions. As a youth I
+		<p class="comment">My hobbies are fleeting obsessions. As a youth I
 			was very into music so I joined a couple of
 			garage bands that fizzled out. Around the same
 			time I got into competitive video games with
-			pipe dreams of being a <a target="blank"
+			pipe dreams of being a <a
 				href="https://liquipedia.net/starcraft/Bonjwa" target="_blank">Brood
 				War bonjwa</a> but I was never really good.
 			Recently, I've forced a friend group to play a
 			Dungeons and Dragons campaign and Magic: the
 			Gathering (which is objectively the best game),
 			both which are collecting dust somewhere.</p>
-		<p>My passion for the internet and computers never
+		<p class="comment">My passion for the internet and computers never
 			waned and I'm doubling down! Adding Full Stack
 			Developer skills to my backend support
 			experience. The idea of directly creating
 			products and tools for anyone on the internet to
 			use is very exciting to me!</p>
-			<p>*/</p>
 	</div>
-	
 	<footer>
 		<span>&copy; 2019 John Michael Laceda</span>
 	</footer>
