@@ -15,13 +15,19 @@
 <script type="text/javascript">
 (function () {
   const diceButtons = document.querySelectorAll('.dice')
+  let ccc = true
   for (var i = diceButtons.length - 1; i >= 0; i--) {
     const buttonEl = diceButtons[i]
     buttonEl.addEventListener('click', function (e) {
       const sides = buttonEl.dataset.sides
       const rollResult = Math.floor(Math.random() * Math.floor(sides) + 1)
       const results = document.getElementById('results')
-      results.innerHTML = `<p>d${sides} rolled:</p><h3>${rollResult}</h3>${results.innerHTML}`
+      results.innerHTML = `
+        <div style="${ccc ? `background-color:#ccc;` : ``} padding:0.25em">
+          <p>d${sides} rolled:</p><h3>${rollResult}</h3>
+        </div>
+        ${results.innerHTML}`
+      ccc = !ccc
     })
   }
 })()
