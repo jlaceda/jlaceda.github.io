@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>dice</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dice</title>
 </head>
 <body>
+<button data-sides=3 class=dice>d3</button>
 <button data-sides=4 class=dice>d4</button>
 <button data-sides=6 class=dice>d6</button>
 <button data-sides=8 class=dice>d8</button>
@@ -15,21 +16,21 @@
 <div id=results></div>
 <script type="text/javascript">
 (function () {
-  const diceButtons = document.querySelectorAll('.dice')
-  let ccc = true
-  for (var i = diceButtons.length - 1; i >= 0; i--) {
-    const buttonEl = diceButtons[i]
-    buttonEl.addEventListener('click', function (e) {
-      const sides = buttonEl.dataset.sides
-      const rollResult = Math.floor(Math.random() * Math.floor(sides) + 1)
-      const results = document.getElementById('results')
-      results.innerHTML = `
-        <div style="${ccc ? `background-color:#ccc;` : ``} padding:0.25em">
-          <p>d${sides} rolled:</p><h3>${rollResult}</h3>
-        </div>
-        ${results.innerHTML}`
-      ccc = !ccc
-    })
+  const diceButtons = document.querySelectorAll('.dice');
+  const resultsDiv = document.getElementById('results');
+  let isGrey = true;
+  const buttonClick = (event) => {
+    const sides = event.target.dataset.sides;
+    const roll = Math.floor(Math.random() * Math.floor(sides) + 1);
+    const resultHtml = `
+      <div style="${isGrey ? `background-color:#ccc;` : ``} padding:0.25em">
+        <p>d${sides} rolled: <strong>${roll}</strong></p>
+      </div>`;
+    resultsDiv.insertAdjacentHTML('afterbegin', resultHtml);
+    isGrey = !isGrey;
+  }
+  for (let i = diceButtons.length - 1; i >= 0; i--) {
+    diceButtons[i].addEventListener('click', buttonClick);
   }
 })()
 </script>
