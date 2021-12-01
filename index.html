@@ -114,7 +114,7 @@ header p {
 	content: "[";
 }
 .projects-container::after {
-	content: "]";
+	content: "];";
 }
 .projects-container {
 	display: flex;
@@ -125,6 +125,7 @@ header p {
 	font-size: calc(10px + 1vw);
 	flex-wrap: wrap;
 	line-height: calc(16px + 1vw);
+	margin-bottom: calc(8px + 1vw);
 }
 .projects-container h2 {
 	font-size: calc(20px + 1vw);
@@ -135,17 +136,22 @@ header p {
 	margin-left: calc(5px + 1vw);
 	margin-right: calc(5px + 1vw);
 }
+.projects-last-item {
+	border: #222;
+	margin-left: calc(5px + 1vw);
+	margin-right: calc(5px + 1vw);
+}
 .projects-item::before {
 	content: "{";
 }
 .projects-item::after {
 	content: "},";
 }
-.comment::before {
-	content: "/*    ";
+.projects-last-item::before {
+	content: "{";
 }
-.comment::after {
-	content: "    */";
+.projects-last-item::after {
+	content: "}";
 }
 h2 {
 	color: #fdce93;
@@ -154,10 +160,11 @@ h2 {
 }
 #about p {
 	font-size: calc(10px + 1vw);
-	color: #7f9f7f;
+	color: #fdce93;
 	margin-bottom: calc(8px + 1vw);
 	margin-left: calc(4px + 1vw);
 	margin-right: calc(4px + 1vw);
+	line-height: calc(16px + 1vw);
 }
 footer {
 	color:#fdcd9320;
@@ -191,7 +198,7 @@ footer {
 	</header>
 
 	<div id="projects">
-		<h2 style="margin-bottom: 3rem; padding: 1rem;">Projects</h2>
+		<h2 style="margin-bottom: 3rem; padding: 1rem;"><span style="color:#efef8f;">const</span> projects = </h2>
 		<div class="projects-container">
 			<div class="projects-item">
 				<p>
@@ -235,54 +242,34 @@ footer {
 					<br />&nbsp;&nbsp;&nbsp;&nbsp; github: '<a href="https://github.com/jlaceda/giftastic" target="_blank">github.com/jlaceda/giftastic</a>'
 				</p>
 			</div>
-			<div class="projects-item">
+			<div class="projects-last-item">
 				<p>
 					&nbsp;&nbsp;&nbsp;&nbsp; name: 'dice',
-					<br />&nbsp;&nbsp;&nbsp;&nbsp; link: '<a href="dice.html" target="_blank">dice.html</a>',
+					<br />&nbsp;&nbsp;&nbsp;&nbsp; link: '<a href="dice.html" target="_blank">dice.html</a>'
 				</p>
 			</div>
 		</div>
 	</div>
 
 	<div id="about">
-		<h2 style="margin-bottom: 3rem; padding: 1rem;">About Me</h2>
-		<p class="comment">I'm John Michael Laceda. I'm an aspiring Full
-			Stack Developer with an extensive tech
-			background in supporting backend services. I
-			hail from a land across the Great Puget Sound in
-			Bremerton Washington. I currently sail into
-			Seattle for work everyday! My beautiful fiancée
-			and I take care of a cute little Rat-Cha
-			(Chihuahua / Rat Terrier mix) named Bella and an
-			old spinster Tabby named Pudgy.</p>
-		<p class="comment">I grew up in the Philippines and survived a <a
-				href="https://en.wikipedia.org/wiki/Mount_Pinatubo#1991_eruption" target="_blank">volcano
-				eruption</a> before my family and I
-			emigrated to The United States of America.</p>
-		<p class="comment">In high school I took a Computer Aided Drafting
-			class as an elective. This set me on a course to
-			wanting to learn all about computers and started
-			breaking and fixing (if I was lucky!) our family
-			computer. I started to get into Linux and
-			eventually got a job supporting back end
-			services run on Linux servers.</p>
-		<p class="comment">My hobbies are fleeting obsessions. As a youth I
-			was very into music so I joined a couple of
-			garage bands that fizzled out. Around the same
-			time I got into competitive video games with
-			pipe dreams of being a <a
-				href="https://liquipedia.net/starcraft/Bonjwa" target="_blank">Brood
-				War bonjwa</a> but I was never really good.
-			Recently, I've forced a friend group to play a
-			Dungeons and Dragons campaign and Magic: the
-			Gathering (which is objectively the best game),
-			both which are collecting dust somewhere.</p>
-		<p class="comment">My passion for the internet and computers never
-			waned and I'm doubling down! Adding Full Stack
-			Developer skills to my backend support
-			experience. The idea of directly creating
-			products and tools for anyone on the internet to
-			use is very exciting to me!</p>
+		<h2 style="margin-bottom: 3rem; padding: 1rem;"><span style="color:#efef8f;">const</span> aboutMe =</h2>
+		<p>`</p>
+		<p>
+		I'm John Michael Laceda. I'm a Software Developer with an extensive background in supporting backend services and frontend web applications. I hail from a land across the Great Puget Sound in Bremerton, Washington. My beautiful wife and I take care of a cute little Rat-Cha (Chihuahua / Rat Terrier mix) named Bella and an old spinster Tabby named Pudgy.
+		</p>
+		<p>
+		I grew up in the Philippines and survived a <a href="https://en.wikipedia.org/wiki/1991_eruption_of_Mount_Pinatubo" target="_blank">volcano eruption</a> before my family and I emigrated to The United States of America.
+		</p>
+		<p>
+		Growing up, my hobbies were fleeting obsessions. I was very into music in high school so I joined a couple of garage bands that fizzled out. Around the same time I got into competitive video games with pipe dreams of being a <a href="https://liquipedia.net/starcraft/Bonjwa" target="_blank">Brood War bonjwa</a> but I was never really good.
+		</p>
+		<p>
+		In high school I took a Computer Aided Drafting class as an elective which set me on a course to wanting to learn all about computers and started breaking and fixing (if I was lucky!) our family computer.
+		</p>
+		<p>
+		My passion for the internet and computers never waned and I doubled down!  I started to get into Linux and eventually got a job supporting backend services run on Linux servers. I got into web development from there and I’m now an individual contributor Software Engineer for an internet company. The idea of creating useful products and tools for anyone on the internet to use is very exciting to me!
+		</p>
+		<p>`;</p>
 	</div>
 	<footer>
 		<span>&copy; 2019 John Michael Laceda</span>
